@@ -1,6 +1,6 @@
 """
 サービスクラス
-S900_HanyoMstShutk
+S900_SelectHanyoMst
 
 戻り値：{共通項目、任意項目1、任意項目2、...}
         └共通項目：{実行結果（エラーフラグ）、メッセージリスト}
@@ -23,11 +23,11 @@ def main(seccd,cd):
         args = ()
         if C050_StringUtil.isNull(cd):
             #クエリを定義
-            sql = "select SECCD,CD,HYOJIJN,NAIYO01,NAIYO02,NAIYO03,NAIYO04,NAIYO05,NAIYO06,NAIYO07,NAIYO08,NAIYO09,NAIYO10 from m101_hanyomst where SECCD = %s and DELFLG = '0' order by HYOJIJN asc ;"
+            sql = "select SECCD,CD,HYOJIJN,NAIYO01,NAIYO02,NAIYO03,NAIYO04,NAIYO05,NAIYO06,NAIYO07,NAIYO08,NAIYO09,NAIYO10 from M101_HANYOMST where SECCD = %s and DELFLG = '0' order by HYOJIJN asc ;"
             #パラメータを定義
             args = (seccd,)
         else:
-            sql = "select SECCD,CD,HYOJIJN,NAIYO01,NAIYO02,NAIYO03,NAIYO04,NAIYO05,NAIYO06,NAIYO07,NAIYO08,NAIYO09,NAIYO10 from m101_hanyomst where SECCD = %s and CD = %s and DELFLG = '0' order by HYOJIJN asc ;"
+            sql = "select SECCD,CD,HYOJIJN,NAIYO01,NAIYO02,NAIYO03,NAIYO04,NAIYO05,NAIYO06,NAIYO07,NAIYO08,NAIYO09,NAIYO10 from M101_HANYOMST where SECCD = %s and CD = %s and DELFLG = '0' order by HYOJIJN asc ;"
             #パラメータを定義
             args = (seccd,cd,)
         #クエリを実行し、結果を取得
