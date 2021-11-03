@@ -60,7 +60,7 @@ def main(request):
             #単項目チェック-------------------------------------------------------------------------------------------------
 
             #DBに同じURLが登録されていないかのチェック--------------------------------------------------------------------
-            json_S185 = S910_TableItemCounter.main("M050_USER","LOGINID",urlID,"0")
+            json_S185 = S910_TableItemCounter.main("T100_PROJECT","URLID",urlID,"0")
             #errflg_S185 = json_S185["json_CommonInfo"]["errflg"]
             list_msgInfo_S185 = json_S185["json_CommonInfo"]["list_msgInfo"]
             #メッセージ格納
