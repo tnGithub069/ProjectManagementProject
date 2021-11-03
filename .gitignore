@@ -1,0 +1,8 @@
+#pythonキャッシュフォルダ
+ProjectManagementProject/__pycache__
+projectmanagementapp/__pycache__
+projectmanagementapp/process/__pycache__
+#settings.pyファイル
+ProjectManagementProject/settings.py
+#不要.vscode
+.vscode
